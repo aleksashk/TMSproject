@@ -1,8 +1,8 @@
-package com.gmail.aleksandrphilimonov.task2;
+package com.gmail.aleksandrphilimonov.task2.task2_3;
 
 import java.util.Scanner;
 
-public class Task2_3 {
+public class MainApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("enter a = ");
@@ -47,14 +47,14 @@ public class Task2_3 {
     }
 
     private static String correctValue(Scanner scanner, String b) {
-        while (isDigit(String.valueOf(b))) {
+        while (checkerCorrectValue(String.valueOf(b))) {
             System.out.println("wrong value. Enter only number.");
             b = scanner.next();
         }
         return b;
     }
 
-    public static boolean isDigit(String str) {
+    public static boolean checkerCorrectValue(String str) {
         try {
             Integer.parseInt(str);
             return false;
