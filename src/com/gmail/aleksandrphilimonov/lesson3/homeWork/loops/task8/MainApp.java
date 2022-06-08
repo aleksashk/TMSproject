@@ -2,6 +2,9 @@ package com.gmail.aleksandrphilimonov.lesson3.homeWork.loops.task8;
 
 import java.util.Scanner;
 
+//Получить конечную сумму вклада в зависимости от введенных количества месяцев и суммы вклада
+//с учетом того, что каждый месяц к вкладу прибавляется 7%
+
 public class MainApp {
     public static void main(String[] args) {
         String msg = "Enter an amount: ";

@@ -5,6 +5,7 @@ import java.util.Scanner;
 import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.printer;
 import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.setMonthNumber;
 
+//Вывести в консоль значение цвета радуги в зависимости от введенного значения от 1 до 7
 public class MainApp {
     public static void main(String[] args) {
         String msg = "enter NUMBER of color in the rainbow: ";

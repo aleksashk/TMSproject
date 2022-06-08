@@ -1,5 +1,6 @@
 package com.gmail.aleksandrphilimonov.lesson3.classWork.task3;
 
+//Вывести на консоль квадраты чисет от 10 до 20 включительно
 public class MainApp {
     public static void main(String[] args) {
         int degree = 2;

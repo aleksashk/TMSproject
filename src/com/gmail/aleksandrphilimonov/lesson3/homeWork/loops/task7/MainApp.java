@@ -1,5 +1,6 @@
 package com.gmail.aleksandrphilimonov.lesson3.homeWork.loops.task7;
 
+// Вывести первые 11 чисел последовательности Фибоначчи
 public class MainApp {
     public static void main(String[] args) {
         int x = 0;

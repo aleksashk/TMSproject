@@ -2,6 +2,8 @@ package com.gmail.aleksandrphilimonov.lesson3.homeWork.controlStructures.task4;
 
 import java.util.Scanner;
 
+//Вывести на консоль сообщение о погоде в зависимости от введенного с клавиатуры значения температуры
+
 public class MainApp {
     public static void main(String[] args) {
         String msg = "enter a temperature: ";

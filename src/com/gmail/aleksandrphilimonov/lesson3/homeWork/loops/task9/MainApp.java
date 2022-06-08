@@ -1,5 +1,7 @@
 package com.gmail.aleksandrphilimonov.lesson3.homeWork.loops.task9;
 
+//Вывести на экран таблицу умножения
+
 public class MainApp {
     public static void main(String[] args) {
         printBorder();

@@ -2,6 +2,7 @@ package com.gmail.aleksandrphilimonov.lesson3.homeWork.controlStructures.task3;
 
 import java.util.Scanner;
 
+//Вывести на консоль сообщение о четности введенного числа
 public class MainApp {
     public static void main(String[] args) {
         String msg = "enter a NUMBER: ";

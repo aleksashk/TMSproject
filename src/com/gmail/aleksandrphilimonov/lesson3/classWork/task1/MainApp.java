@@ -2,6 +2,7 @@ package com.gmail.aleksandrphilimonov.lesson3.classWork.task1;
 
 import java.util.Scanner;
 
+//Написать программу по выводу названия месяца при вводе с консоли номера месяца
 public class MainApp {
     public static void main(String[] args) {
         String msg = "enter NUMBER of month: ";

@@ -1,5 +1,6 @@
 package com.gmail.aleksandrphilimonov.lesson3.classWork.task4;
 
+///Вывести на консоль результаты из таблицы умножения
 public class MainApp {
     public static void main(String[] args) {
 

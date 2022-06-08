@@ -2,6 +2,7 @@ package com.gmail.aleksandrphilimonov.lesson3.homeWork.loops.task3;
 
 import java.util.Scanner;
 
+//Вывести сымму всех чисел от 1 до введенного положительного значения
 public class MainApp {
     public static void main(String[] args) {
         String msg = "Enter only positive number: ";

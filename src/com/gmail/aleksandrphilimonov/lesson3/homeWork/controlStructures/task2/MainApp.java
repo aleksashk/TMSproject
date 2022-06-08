@@ -5,6 +5,8 @@ import java.util.Scanner;
 import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.printer;
 import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.setMonthNumber;
 
+//Вывести на консоль пору года в зависимости от введенного номера месяца используя if-else-if
+
 public class MainApp {
     public static void main(String[] args) {
         String msg = "enter NUMBER of month: ";
