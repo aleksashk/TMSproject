@@ -11,7 +11,7 @@ public class MainApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        int temperature = setNumber(scanner);
+        int temperature = getNumber(scanner);
 
         if (temperature > -5) {
             System.out.print("the weather is hot");
@@ -22,7 +22,7 @@ public class MainApp {
         }
     }
 
-    public static int setNumber(Scanner scanner) {
+    public static int getNumber(Scanner scanner) {
         String string = scanner.nextLine();
         String msg = "Enter only a temperature: ";
         while (!checkValidValue(string)) {

@@ -7,7 +7,7 @@ public class MainApp {
     public static void main(String[] args) {
         String msg = "Enter only positive number: ";
         print(msg);
-        int number = setNumber();
+        int number = getNumber();
         if (number == 0) {
             print("number shoul");
         }
@@ -18,7 +18,7 @@ public class MainApp {
         System.out.println(result);
     }
 
-    public static int setNumber() {
+    public static int getNumber() {
         String msg = "Enter only positive number: ";
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
@@ -29,7 +29,7 @@ public class MainApp {
         int number = Integer.parseInt(string);
         while (number <= 0) {
             print(msg);
-            number = setNumber();
+            number = getNumber();
         }
         return number;
     }

@@ -10,7 +10,7 @@ public class MainApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        int monthNumber = setMonthNumber(scanner);
+        int monthNumber = getMonthNumber(scanner);
 
         switch (monthNumber) {
             case 1:
@@ -54,7 +54,7 @@ public class MainApp {
         }
     }
 
-    public static int setMonthNumber(Scanner scanner) {
+    public static int getMonthNumber(Scanner scanner) {
         String string = scanner.nextLine();
         String msg = "Enter correct number of month! Number of month: ";
         while (!checkValidValue(string)) {

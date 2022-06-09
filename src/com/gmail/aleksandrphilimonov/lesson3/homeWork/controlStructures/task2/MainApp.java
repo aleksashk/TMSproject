@@ -3,7 +3,7 @@ package com.gmail.aleksandrphilimonov.lesson3.homeWork.controlStructures.task2;
 import java.util.Scanner;
 
 import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.printer;
-import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.setMonthNumber;
+import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.getMonthNumber;
 
 //Вывести на консоль пору года в зависимости от введенного номера месяца используя if-else-if
 
@@ -14,7 +14,7 @@ public class MainApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        int monthNumber = setMonthNumber(scanner);
+        int monthNumber = getMonthNumber(scanner);
 
         if (monthNumber == 12 || monthNumber == 1 | monthNumber == 2) {
             System.out.print("If month: " + monthNumber + " this is winter");

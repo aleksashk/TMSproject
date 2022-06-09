@@ -10,7 +10,7 @@ public class MainApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        int number = setNumber(scanner);
+        int number = getNumber(scanner);
 
         if (number % 2 == 0) {
             System.out.print("the number " + number + " is even");
@@ -19,7 +19,7 @@ public class MainApp {
         }
     }
 
-    public static int setNumber(Scanner scanner) {
+    public static int getNumber(Scanner scanner) {
         String string = scanner.nextLine();
         String msg = "Enter only a number: ";
         while (!checkValidValue(string)) {

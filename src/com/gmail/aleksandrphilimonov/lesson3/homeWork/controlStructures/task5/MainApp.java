@@ -3,7 +3,7 @@ package com.gmail.aleksandrphilimonov.lesson3.homeWork.controlStructures.task5;
 import java.util.Scanner;
 
 import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.printer;
-import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.setMonthNumber;
+import static com.gmail.aleksandrphilimonov.lesson3.classWork.task1.MainApp.getMonthNumber;
 
 //Вывести в консоль значение цвета радуги в зависимости от введенного значения от 1 до 7
 public class MainApp {
@@ -13,7 +13,7 @@ public class MainApp {
 
         Scanner scanner = new Scanner(System.in);
 
-        int monthNumber = setMonthNumber(scanner);
+        int monthNumber = getMonthNumber(scanner);
 
         switch (monthNumber) {
             case 1:

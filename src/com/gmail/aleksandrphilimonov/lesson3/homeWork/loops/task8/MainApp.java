@@ -13,7 +13,7 @@ public class MainApp {
 
         msg = "Enter a number of months: ";
         printer(msg);
-        int numberOfMonth = setNumberOfMonth();
+        int numberOfMonth = getNumberOfMonth();
 
         int percent = 7;
 
@@ -35,7 +35,7 @@ public class MainApp {
         return Float.parseFloat(string);
     }
 
-    public static int setNumberOfMonth() {
+    public static int getNumberOfMonth() {
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
         String msg = "Enter correct number of months! The number of months should be more than 0: ";
