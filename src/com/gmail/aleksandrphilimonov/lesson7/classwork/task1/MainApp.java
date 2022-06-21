@@ -15,9 +15,10 @@ public class MainApp {
                 new Circle(3.21),
                 new Triangle(2.01,1.25,3.05)
         };
-
+        double totalShapesPerimeter = 0;
         for (Shape shape : shapes) {
-            UtilityClass.printer("perimeter of " + shape.getClass().getSimpleName() + " is " + shape.getPerimeter() + "\n");
+            totalShapesPerimeter += shape.getPerimeter();
         }
+        UtilityClass.printer("total perimeter of all shapes is " + totalShapesPerimeter);
     }
 }

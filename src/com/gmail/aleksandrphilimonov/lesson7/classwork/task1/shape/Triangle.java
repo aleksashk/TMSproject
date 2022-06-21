@@ -10,6 +10,12 @@ public class Triangle implements Shape{
         return sideA + sideB + sideC;
     }
 
+    @Override
+    public double getArea() {
+        double p = getPerimeter();
+        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+    }
+
     public Triangle(double sideA, double sideB, double sideC) {
         this.sideA = sideA;
         this.sideB = sideB;

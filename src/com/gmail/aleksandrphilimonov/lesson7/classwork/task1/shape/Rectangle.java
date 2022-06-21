@@ -14,6 +14,11 @@ public class Rectangle implements Shape{
         return 2 * (sideA + sideB);
     }
 
+    @Override
+    public double getArea() {
+        return sideA * sideB;
+    }
+
     public double getSideA() {
         return sideA;
     }
