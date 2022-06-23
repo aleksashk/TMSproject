@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.lesson8.classwork;
+package com.gmail.aleksandrphilimonov.lesson8.classwork.task1;
 
 import com.gmail.aleksandrphilimonov.lesson8.classwork.task1.model.Phone;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
