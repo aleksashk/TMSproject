@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.task2.task2_4;
+package com.gmail.aleksandrphilimonov.lesson2.task2.task2_4;
 
 import java.util.Scanner;
 

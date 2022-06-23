@@ -1,8 +1,8 @@
-package com.gmail.aleksandrphilimonov.task2.task2_2;
+package com.gmail.aleksandrphilimonov.lesson2.task2.task2_2;
 
 import java.util.Scanner;
 
-import static com.gmail.aleksandrphilimonov.task2.task2_3.MainApp.checkerCorrectValue;
+import static com.gmail.aleksandrphilimonov.lesson2.task2.task2_3.MainApp.checkerCorrectValue;
 
 public class MainApp {
     public static void main(String[] args) {
