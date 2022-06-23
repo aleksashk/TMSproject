@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.task1;
+package com.gmail.aleksandrphilimonov.lesson1.task1;
 
 public class Task1 {
     public static void main(String[] args) {

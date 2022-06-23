@@ -1,6 +1,9 @@
 package com.gmail.aleksandrphilimonov.util;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -49,9 +52,9 @@ public class UtilityClass {
 
     public static int sumOfMatrixElements(int[][] matrix) {
         int result = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                result += matrix[i][j];
+        for (int[] ints : matrix) {
+            for (int j = 0; j < ints.length; j++) {
+                result += ints[j];
             }
         }
         return result;
@@ -71,9 +74,9 @@ public class UtilityClass {
             }
         }
 
-        for (int i = 0; i < res.length; i++) {
+        for (int[] re : res) {
             for (int j = 0; j < res[0].length; j++) {
-                System.out.format("%6d ", res[i][j]);
+                System.out.format("%6d ", re[j]);
             }
             System.out.println();
         }
@@ -314,6 +317,14 @@ public class UtilityClass {
             int temp = matrix[i][j];
             matrix[i][j] = matrix[i][k];
             matrix[i][k] = temp;
+        }
+    }
+
+    public static Date parseDate(String date) {
+        try {
+            return new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            return null;
         }
     }
 }
