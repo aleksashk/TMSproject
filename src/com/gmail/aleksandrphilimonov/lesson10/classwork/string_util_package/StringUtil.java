@@ -3,6 +3,13 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.string_util_package;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 public class StringUtil {
+    public static final String DASH = "-";
+    public static final String SPACE = " ";
+    public static final String STRING_FOR_REPLACE = "***";
+    public static final String CHECK_STRING = "abc";
+    public static final int NUMBER_FOR_CHECK = 555;
+    public static final String CHECK_STRING1 = "1a2b";
+
     public static void printFirstTwoNumericBlocks(String string) {
         String delimiter = "-";
         String[] sArray = splitStringByDash(string);
@@ -14,16 +21,14 @@ public class StringUtil {
     }
 
     private static String[] splitStringByDash(String string) {
-        return string.split("-");
+        return string.split(DASH);
     }
 
     public static void renameAllLetter(String string) {
-        String delimiter = "-";
-        String stringForReplace = "***";
         StringBuilder sb = new StringBuilder();
         String[] array = splitStringByDash(string);
         for (String s : array) {
-            isThreeLetters(delimiter, stringForReplace, sb, s);
+            isThreeLetters(sb, s);
         }
         sb.delete(sb.length() - 1, sb.length());
         System.out.print(sb);
@@ -37,22 +42,21 @@ public class StringUtil {
                 .append(sArray[3].toLowerCase())
                 .append('/');
         sb.append(sArray[4].toLowerCase().charAt(1))
-                .append("/")
+                .append('/')
                 .append(sArray[4].toLowerCase().charAt(3));
         UtilityClass.printer(sb.toString());
     }
 
     public static void isContainsAbc(String string) {
-        String checkString = "abc";
         String msg = "";
-        String[] sArray = string.split("-");
+        String[] sArray = string.split(DASH);
         for (String value : sArray) {
             String s = value.toLowerCase();
-            if (s.contains(checkString)) {
-                msg = "sequence " + s + " contains string " + checkString + "\n";
+            if (s.contains(CHECK_STRING)) {
+                msg = "sequence " + s + " contains string " + CHECK_STRING + "\n";
                 break;
             } else {
-                msg = "sequence " + s + " don't contains string " + checkString + "\n";
+                msg = "sequence " + s + " don't contains string " + CHECK_STRING + "\n";
             }
         }
         UtilityClass.printer(msg);
@@ -60,8 +64,7 @@ public class StringUtil {
 
     public static void isStartWith(String string) {
         String msg;
-        int number = 555;
-        String checkString = String.valueOf(number);
+        String checkString = String.valueOf(NUMBER_FOR_CHECK);
         if (string.startsWith(checkString)) {
             msg = "String " + string + " starts with " + checkString + "\n";
         } else {
@@ -72,11 +75,10 @@ public class StringUtil {
 
     public static void isEndWith(String string) {
         String msg;
-        String checkString = "1a2b";
-        if (string.endsWith(checkString)) {
-            msg = "String " + string + " ends with " + checkString + "\n";
+        if (string.endsWith(CHECK_STRING1)) {
+            msg = "String " + string + " ends with " + CHECK_STRING1 + "\n";
         } else {
-            msg = "String " + string + " doesn't end with " + checkString + "\n";
+            msg = "String " + string + " doesn't end with " + CHECK_STRING1 + "\n";
         }
         UtilityClass.printer(msg);
     }
@@ -122,23 +124,23 @@ public class StringUtil {
     }
 
     private static String[] splitStringBySpace(String string) {
-        return string.split(" ");
+        return string.split(SPACE);
     }
 
     private static int findNumbersUniqueIndex(String string) {
         int counterOfNumberUnique = 1;
         for (int i = 0; i < string.length(); i++) {
-            if(!string.contains(string.substring(i))){
+            if (!string.contains(string.substring(i))) {
                 counterOfNumberUnique++;
             }
         }
         return counterOfNumberUnique;
     }
 
-    private static void isThreeLetters(String delimiter, String stringForReplace, StringBuilder sb, String s) {
+    private static void isThreeLetters(StringBuilder sb, String s) {
         if (s.length() != 3) {
             sb.append(s)
-                    .append(delimiter);
+                    .append(StringUtil.DASH);
         } else {
             boolean flag = true;
             char[] chars = s.toCharArray();
@@ -151,8 +153,8 @@ public class StringUtil {
             if (!flag) {
                 sb.append(s);
             } else {
-                sb.append(stringForReplace)
-                        .append(delimiter);
+                sb.append(StringUtil.STRING_FOR_REPLACE)
+                        .append(StringUtil.DASH);
             }
         }
     }
