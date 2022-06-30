@@ -15,6 +15,6 @@ public class MainApp {
         StringUtility.theShortestWord(string);
         StringUtility.theLongestWord(string);
         StringUtility.showMinUniqueLettersInWord(string);
-        StringUtility.checkPalindromInString(string);
+        StringUtility.checkPalindromeInString(string);
     }
 }

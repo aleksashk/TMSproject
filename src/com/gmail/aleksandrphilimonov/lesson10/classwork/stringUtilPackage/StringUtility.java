@@ -2,6 +2,8 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
+import java.util.Scanner;
+
 public class StringUtility {
     public static final String DASH = "-";
     public static final String SPACE = " ";
@@ -137,24 +139,30 @@ public class StringUtility {
         return counterOfNumberUnique;
     }
 
-    public static void checkPalindromInString(String string) {
+    public static void checkPalindromeInString(String string) {
+        System.out.print("input number of word for checking to palindrome: ");
+        Scanner s = new Scanner(System.in);
+        int number = Integer.parseInt(s.next()) - 1;
+        String[] sArray = string.split(SPACE);
+        while (number < 0 || number > sArray.length - 1) {
+            System.out.println("Wrong number. Try again: ");
+            number = Integer.parseInt(s.next());
+        }
         String palindrome = "the word is palindrome";
         String notPalindrome = "the word isn't palindrome";
-        String[] sArray = string.split(SPACE);
-        for (String s : sArray) {
-            if (isPalindrome(s)) {
-                UtilityClass.printer(s + " " + palindrome + "\n");
-            } else {
-                UtilityClass.printer(s + " " + notPalindrome + "\n");
-            }
+
+        if (isPalindrome(sArray[number])) {
+            UtilityClass.printer("'" + sArray[number] + "' " + palindrome + "\n");
+        } else {
+            UtilityClass.printer("'" + sArray[number] + "' " + notPalindrome + "\n");
         }
     }
 
     private static boolean isPalindrome(String s) {
         boolean flag = true;
-        for (int i = 0; i < s.length()/2; i++) {
-            if(s.length() != 1 &&
-                    !(s.charAt(i) == s.charAt(s.length() - i - 1))){
+        for (int i = 0; i < s.length() / 2; i++) {
+            if (s.length() != 1 &&
+                    !(s.charAt(i) == s.charAt(s.length() - i - 1))) {
                 flag = false;
                 break;
             }
