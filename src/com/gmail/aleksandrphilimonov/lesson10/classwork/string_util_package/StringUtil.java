@@ -96,6 +96,19 @@ public class StringUtil {
         System.out.println("word with shortest length is: " + resultWord);
     }
 
+    public static void theLongestWord(String string) {
+        String[] sArray = splitStringByDash(string);
+        int maxLength = sArray[0].length();
+        String resultWord = sArray[0];
+        for (int i = 1; i < sArray.length; i++) {
+            if (sArray[i].length() > maxLength) {
+                maxLength = sArray[i].length();
+                resultWord = sArray[i];
+            }
+        }
+        System.out.println("word with longest length is: " + resultWord);
+    }
+
     private static void isThreeLetters(String delimiter, String stringForReplace, StringBuilder sb, String s) {
         if (s.length() != 3) {
             sb.append(s)
