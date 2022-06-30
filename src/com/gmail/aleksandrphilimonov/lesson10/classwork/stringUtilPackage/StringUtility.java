@@ -191,4 +191,16 @@ public class StringUtility {
             }
         }
     }
+
+    public static void doubleLetter(String string) {
+        char[] chars = string.toCharArray();
+        for (int i = 0; i < chars.length; ) {
+            System.out.print(chars[i]);
+            if (Character.isAlphabetic(chars[i])) {
+                System.out.print(chars[i++]);
+            } else {
+                i++;
+            }
+        }
+    }
 }

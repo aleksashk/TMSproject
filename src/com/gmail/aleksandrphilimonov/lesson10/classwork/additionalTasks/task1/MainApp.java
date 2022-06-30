@@ -16,5 +16,6 @@ public class MainApp {
         StringUtility.theLongestWord(string);
         StringUtility.showMinUniqueLettersInWord(string);
         StringUtility.checkPalindromeInString(string);
+        StringUtility.doubleLetter(string);
     }
 }
