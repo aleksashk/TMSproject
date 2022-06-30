@@ -60,8 +60,9 @@ public class StringUtil {
         UtilityClass.printer(msg);
     }
 
-    public static void isStartWith(String string, int number) {
+    public static void isStartWith(String string) {
         String msg;
+        int number = 555;
         String checkString = String.valueOf(number);
         if (string.startsWith(checkString)) {
             msg = "String " + string + " starts with " + checkString + "\n";

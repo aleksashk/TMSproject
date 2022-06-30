@@ -25,9 +25,9 @@ public class MainApp {
         StringUtil.isContainsAbc(string3);
         UtilityClass.printer(delimiter);
 
-        StringUtil.isStartWith(string, 555);
-        StringUtil.isStartWith(string2, 555);
-        StringUtil.isStartWith(string3, 555);
+        StringUtil.isStartWith(string);
+        StringUtil.isStartWith(string2);
+        StringUtil.isStartWith(string3);
         UtilityClass.printer(delimiter);
     }
 }
