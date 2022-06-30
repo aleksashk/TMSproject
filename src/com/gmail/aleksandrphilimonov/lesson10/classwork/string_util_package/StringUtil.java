@@ -14,8 +14,7 @@ public class StringUtil {
     }
 
     private static String[] splitStringByDash(String string) {
-        String[] sArray = string.split("-");
-        return sArray;
+        return string.split("-");
     }
 
     public static void renameAllLetter(String string) {
@@ -23,21 +22,21 @@ public class StringUtil {
         String stringForReplace = "***";
         StringBuilder sb = new StringBuilder();
         String[] array = string.split(delimiter);
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].length() != 3) {
-                sb.append(array[i])
+        for (String s : array) {
+            if (s.length() != 3) {
+                sb.append(s)
                         .append(delimiter);
             } else {
                 boolean flag = true;
-                char[] chars = array[i].toCharArray();
-                for (int j = 0; j < chars.length; j++) {
-                    if (!Character.isAlphabetic(chars[j])) {
+                char[] chars = s.toCharArray();
+                for (char aChar : chars) {
+                    if (!Character.isAlphabetic(aChar)) {
                         flag = false;
                         break;
                     }
                 }
                 if (!flag) {
-                    sb.append(array[i]);
+                    sb.append(s);
                 } else {
                     sb.append(stringForReplace)
                             .append(delimiter);
