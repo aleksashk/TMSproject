@@ -60,6 +60,17 @@ public class StringUtil {
         UtilityClass.printer(msg);
     }
 
+    public static void isStartWith(String string, int number) {
+        String msg;
+        String checkString = String.valueOf(number);
+        if (string.startsWith(checkString)) {
+            msg = "String " + string + " starts with " + checkString + "\n";
+        } else {
+            msg = "String " + string + " doesn't start with " + checkString + "\n";
+        }
+        UtilityClass.printer(msg);
+    }
+
     private static void isThreeLetters(String delimiter, String stringForReplace, StringBuilder sb, String s) {
         if (s.length() != 3) {
             sb.append(s)
