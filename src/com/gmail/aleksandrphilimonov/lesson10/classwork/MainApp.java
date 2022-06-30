@@ -9,7 +9,7 @@ public class MainApp {
 //        String string = scanner.nextLine();
         String string = "5554-dpm-2345-xyz-9r7w";
         String string2 = "1234-dpm-2345-abc-9r7w";
-        String string3 = "1234-ABC-2345-ert-9r7w";
+        String string3 = "1234-ABC-2345-ert-1a2b";
         String delimiter = "\n--------------------------------\n";
         StringUtil.printFirstTwoNumericBlocks(string);
         UtilityClass.printer(delimiter);
@@ -28,6 +28,11 @@ public class MainApp {
         StringUtil.isStartWith(string);
         StringUtil.isStartWith(string2);
         StringUtil.isStartWith(string3);
+        UtilityClass.printer(delimiter);
+
+        StringUtil.isEndWith(string);
+        StringUtil.isEndWith(string2);
+        StringUtil.isEndWith(string3);
         UtilityClass.printer(delimiter);
     }
 }

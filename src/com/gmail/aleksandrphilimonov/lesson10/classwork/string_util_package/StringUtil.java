@@ -72,6 +72,17 @@ public class StringUtil {
         UtilityClass.printer(msg);
     }
 
+    public static void isEndWith(String string) {
+        String msg;
+        String checkString = "1a2b";
+        if (string.endsWith(checkString)) {
+            msg = "String " + string + " ends with " + checkString + "\n";
+        } else {
+            msg = "String " + string + " doesn't end with " + checkString + "\n";
+        }
+        UtilityClass.printer(msg);
+    }
+
     private static void isThreeLetters(String delimiter, String stringForReplace, StringBuilder sb, String s) {
         if (s.length() != 3) {
             sb.append(s)
