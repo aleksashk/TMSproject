@@ -83,6 +83,19 @@ public class StringUtil {
         UtilityClass.printer(msg);
     }
 
+    public static void theShortestWord(String string) {
+        String[] sArray = splitStringByDash(string);
+        int minLength = sArray[0].length();
+        String resultWord = sArray[0];
+        for (int i = 1; i < sArray.length; i++) {
+            if (sArray[i].length() < minLength) {
+                minLength = sArray[i].length();
+                resultWord = sArray[i];
+            }
+        }
+        System.out.println("word with shortest length is: " + resultWord);
+    }
+
     private static void isThreeLetters(String delimiter, String stringForReplace, StringBuilder sb, String s) {
         if (s.length() != 3) {
             sb.append(s)
