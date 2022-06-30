@@ -9,10 +9,12 @@ public class MainApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String msg = "Enter some string: ";
-        UtilityClass.printer(msg);
-        String string = scanner.nextLine();
+//        UtilityClass.printer(msg);
+//        String string = scanner.nextLine();
+        String string = "fffffff asdf 45 sdr";
 
         StringUtil.theShortestWord(string);
         StringUtil.theLongestWord(string);
+        StringUtil.showMinUniqueLettersInWord(string);
     }
 }

@@ -2,8 +2,6 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.string_util_package;
 
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
-import java.util.Arrays;
-
 public class StringUtil {
     public static void printFirstTwoNumericBlocks(String string) {
         String delimiter = "-";
@@ -48,8 +46,8 @@ public class StringUtil {
         String checkString = "abc";
         String msg = "";
         String[] sArray = string.split("-");
-        for (int i = 0; i < sArray.length; i++) {
-            String s = Arrays.toString(sArray).toLowerCase();
+        for (String value : sArray) {
+            String s = value.toLowerCase();
             if (s.contains(checkString)) {
                 msg = "sequence " + s + " contains string " + checkString + "\n";
                 break;
@@ -107,6 +105,34 @@ public class StringUtil {
             }
         }
         System.out.println("word with longest length is: " + resultWord);
+    }
+
+    public static void showMinUniqueLettersInWord(String string) {
+        String[] sArray = splitStringBySpace(string);
+        int minNumberUniqueLetters = findNumbersUniqueIndex(sArray[0]);
+        String resultWord = sArray[0];
+        for (int i = 1; i < sArray.length; i++) {
+            int number = findNumbersUniqueIndex(sArray[i]);
+            if (number < minNumberUniqueLetters) {
+                minNumberUniqueLetters = number;
+                resultWord = sArray[i];
+            }
+        }
+        System.out.println("a word with a minimum number of different characters: " + resultWord);
+    }
+
+    private static String[] splitStringBySpace(String string) {
+        return string.split(" ");
+    }
+
+    private static int findNumbersUniqueIndex(String string) {
+        int counterOfNumberUnique = 1;
+        for (int i = 0; i < string.length(); i++) {
+            if(!string.contains(string.substring(i))){
+                counterOfNumberUnique++;
+            }
+        }
+        return counterOfNumberUnique;
     }
 
     private static void isThreeLetters(String delimiter, String stringForReplace, StringBuilder sb, String s) {
