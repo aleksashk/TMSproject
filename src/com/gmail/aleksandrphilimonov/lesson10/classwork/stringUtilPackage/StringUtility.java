@@ -1,8 +1,8 @@
-package com.gmail.aleksandrphilimonov.lesson10.classwork.string_util_package;
+package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
-public class StringUtil {
+public class StringUtility {
     public static final String DASH = "-";
     public static final String SPACE = " ";
     public static final String STRING_FOR_REPLACE = "***";
@@ -137,10 +137,35 @@ public class StringUtil {
         return counterOfNumberUnique;
     }
 
+    public static void checkPalindromInString(String string) {
+        String palindrome = "the word is palindrome";
+        String notPalindrome = "the word isn't palindrome";
+        String[] sArray = string.split(SPACE);
+        for (String s : sArray) {
+            if (isPalindrome(s)) {
+                UtilityClass.printer(s + " " + palindrome + "\n");
+            } else {
+                UtilityClass.printer(s + " " + notPalindrome + "\n");
+            }
+        }
+    }
+
+    private static boolean isPalindrome(String s) {
+        boolean flag = true;
+        for (int i = 0; i < s.length()/2; i++) {
+            if(s.length() != 1 &&
+                    !(s.charAt(i) == s.charAt(s.length() - i - 1))){
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
     private static void isThreeLetters(StringBuilder sb, String s) {
         if (s.length() != 3) {
             sb.append(s)
-                    .append(StringUtil.DASH);
+                    .append(StringUtility.DASH);
         } else {
             boolean flag = true;
             char[] chars = s.toCharArray();
@@ -153,8 +178,8 @@ public class StringUtil {
             if (!flag) {
                 sb.append(s);
             } else {
-                sb.append(StringUtil.STRING_FOR_REPLACE)
-                        .append(StringUtil.DASH);
+                sb.append(StringUtility.STRING_FOR_REPLACE)
+                        .append(StringUtility.DASH);
             }
         }
     }

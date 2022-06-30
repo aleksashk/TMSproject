@@ -1,6 +1,6 @@
-package com.gmail.aleksandrphilimonov.lesson10.classwork;
+package com.gmail.aleksandrphilimonov.lesson10.classwork.mainTask;
 
-import com.gmail.aleksandrphilimonov.lesson10.classwork.string_util_package.StringUtil;
+import com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage.StringUtility;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 public class MainApp {
@@ -11,28 +11,28 @@ public class MainApp {
         String string2 = "1234-dpm-2345-abc-9r7w";
         String string3 = "1234-ABC-2345-ert-1a2b";
         String delimiter = "\n--------------------------------\n";
-        StringUtil.printFirstTwoNumericBlocks(string);
+        StringUtility.printFirstTwoNumericBlocks(string);
         UtilityClass.printer(delimiter);
 
-        StringUtil.renameAllLetter(string);
+        StringUtility.renameAllLetter(string);
         UtilityClass.printer(delimiter);
 
-        StringUtil.showOnlyLetters(string);
+        StringUtility.showOnlyLetters(string);
         UtilityClass.printer(delimiter);
 
-        StringUtil.isContainsAbc(string);
-        StringUtil.isContainsAbc(string2);
-        StringUtil.isContainsAbc(string3);
+        StringUtility.isContainsAbc(string);
+        StringUtility.isContainsAbc(string2);
+        StringUtility.isContainsAbc(string3);
         UtilityClass.printer(delimiter);
 
-        StringUtil.isStartWith(string);
-        StringUtil.isStartWith(string2);
-        StringUtil.isStartWith(string3);
+        StringUtility.isStartWith(string);
+        StringUtility.isStartWith(string2);
+        StringUtility.isStartWith(string3);
         UtilityClass.printer(delimiter);
 
-        StringUtil.isEndWith(string);
-        StringUtil.isEndWith(string2);
-        StringUtil.isEndWith(string3);
+        StringUtility.isEndWith(string);
+        StringUtility.isEndWith(string2);
+        StringUtility.isEndWith(string3);
         UtilityClass.printer(delimiter);
     }
 }
