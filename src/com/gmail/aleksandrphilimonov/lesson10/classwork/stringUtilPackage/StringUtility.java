@@ -2,6 +2,9 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class StringUtility {
@@ -144,30 +147,29 @@ public class StringUtility {
         Scanner s = new Scanner(System.in);
         int number = Integer.parseInt(s.next()) - 1;
         String[] sArray = string.split(SPACE);
+
         while (number < 0 || number > sArray.length - 1) {
             System.out.println("Wrong number. Try again: ");
             number = Integer.parseInt(s.next());
         }
-        String palindrome = "the word is palindrome";
-        String notPalindrome = "the word isn't palindrome";
 
-        if (isPalindrome(sArray[number])) {
-            UtilityClass.printer("'" + sArray[number] + "' " + palindrome + "\n");
-        } else {
-            UtilityClass.printer("'" + sArray[number] + "' " + notPalindrome + "\n");
+        String word = sArray[number];
+
+        List<Character> list = new LinkedList<>();
+        for (char ch : word.toCharArray()) {
+            list.add(ch);
         }
-    }
 
-    private static boolean isPalindrome(String s) {
-        boolean flag = true;
-        for (int i = 0; i < s.length() / 2; i++) {
-            if (s.length() != 1 &&
-                    !(s.charAt(i) == s.charAt(s.length() - i - 1))) {
-                flag = false;
+        ListIterator<Character> listIterator = list.listIterator();
+        ListIterator<Character> listIteratorReverse = list.listIterator(list.size());
+        String msg = "Word '" + word + "' is palindrome";
+        while (listIterator.hasNext() & listIteratorReverse.hasPrevious()) {
+            if (Character.toLowerCase(listIterator.next()) != Character.toLowerCase(listIteratorReverse.previous())) {
+                msg = "Word '" + word + "' isn't a palindrome.";
                 break;
             }
         }
-        return flag;
+        System.out.println(msg);
     }
 
     private static void isThreeLetters(StringBuilder sb, String s) {

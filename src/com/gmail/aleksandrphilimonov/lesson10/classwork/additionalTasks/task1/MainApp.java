@@ -12,10 +12,10 @@ public class MainApp {
 //        String string = scanner.nextLine();
         String string = "faf asdf 45 sdr";
 
-        StringUtility.theShortestWord(string);
-        StringUtility.theLongestWord(string);
-        StringUtility.showMinUniqueLettersInWord(string);
+//        StringUtility.theShortestWord(string);
+//        StringUtility.theLongestWord(string);
+//        StringUtility.showMinUniqueLettersInWord(string);
         StringUtility.checkPalindromeInString(string);
-        StringUtility.doubleLetter(string);
+//        StringUtility.doubleLetter(string);
     }
 }
