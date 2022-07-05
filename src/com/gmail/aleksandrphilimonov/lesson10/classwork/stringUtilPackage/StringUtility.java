@@ -17,16 +17,12 @@ public class StringUtility {
 
     public static void printFirstTwoNumericBlocks(String string) {
         String delimiter = "-";
-        String[] sArray = splitStringByDash(string);
+        String[] sArray = string.split(DASH);
         int firstBlock = Integer.parseInt(sArray[0]);
         int secondBlock = Integer.parseInt(sArray[2]);
         UtilityClass.print(firstBlock);
         UtilityClass.printer(delimiter);
         UtilityClass.print(secondBlock);
-    }
-
-    private static String[] splitStringByDash(String string) {
-        return string.split(DASH);
     }
 
     public static void renameAllLetter(String string) {
@@ -36,7 +32,7 @@ public class StringUtility {
 
     public static void showOnlyLetters(String string) {
         StringBuilder sb = new StringBuilder();
-        String[] sArray = splitStringByDash(string);
+        String[] sArray = string.split(DASH);
         sb.append(sArray[1].toLowerCase())
                 .append('/')
                 .append(sArray[3].toLowerCase())
@@ -78,7 +74,7 @@ public class StringUtility {
     }
 
     public static void theShortestWord(String string) {
-        String[] sArray = splitStringByDash(string);
+        String[] sArray = string.split(DASH);
         int minLength = sArray[0].length();
         String resultWord = sArray[0];
         for (int i = 1; i < sArray.length; i++) {
@@ -91,7 +87,7 @@ public class StringUtility {
     }
 
     public static void theLongestWord(String string) {
-        String[] sArray = splitStringByDash(string);
+        String[] sArray = string.split(DASH);
         int maxLength = sArray[0].length();
         String resultWord = sArray[0];
         for (int i = 1; i < sArray.length; i++) {
@@ -104,7 +100,7 @@ public class StringUtility {
     }
 
     public static void showMinUniqueLettersInWord(String string) {
-        String[] sArray = splitStringBySpace(string);
+        String[] sArray = string.split(SPACE);
         int minNumberUniqueLetters = findNumbersUniqueIndex(sArray[0]);
         String resultWord = sArray[0];
         for (int i = 1; i < sArray.length; i++) {
@@ -115,10 +111,6 @@ public class StringUtility {
             }
         }
         System.out.println("a word with a minimum number of different characters: " + resultWord);
-    }
-
-    private static String[] splitStringBySpace(String string) {
-        return string.split(SPACE);
     }
 
     private static int findNumbersUniqueIndex(String string) {
