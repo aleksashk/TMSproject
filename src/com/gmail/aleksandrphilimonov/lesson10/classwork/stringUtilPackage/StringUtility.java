@@ -1,5 +1,6 @@
 package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 import java.util.Scanner;
@@ -40,14 +41,15 @@ public class StringUtility {
         UtilityClass.printer(sb.toString());
     }
 
-    public static void checkContainsAbc(String string) {
+    public static void checkContainsAbc(String string) throws DocumentNumberDoesNotContainSequenceException {
         String msg;
-        if (string.contains(CHECK_STRING)) {
-            msg = "string " + string + " contains substring " + CHECK_STRING + "\n";
-        } else {
+        if (!string.contains(CHECK_STRING)) {
             msg = "string " + string + " don't contains substring " + CHECK_STRING + "\n";
+            throw new DocumentNumberDoesNotContainSequenceException(msg);
+        }else {
+            msg = "string " + string + " contains substring " + CHECK_STRING + "\n";
+            UtilityClass.printer(msg);
         }
-        UtilityClass.printer(msg);
     }
 
     public static void checkStartWith(String string) {

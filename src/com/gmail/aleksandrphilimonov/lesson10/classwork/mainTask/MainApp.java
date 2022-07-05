@@ -1,6 +1,7 @@
 package com.gmail.aleksandrphilimonov.lesson10.classwork.mainTask;
 
 import com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage.StringUtility;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 public class MainApp {
@@ -20,9 +21,14 @@ public class MainApp {
         StringUtility.showOnlyLetters(string);
         UtilityClass.printer(delimiter);
 
-        StringUtility.checkContainsAbc(string);
-        StringUtility.checkContainsAbc(string2);
-        StringUtility.checkContainsAbc(string3);
+        try {
+            StringUtility.checkContainsAbc(string);
+            StringUtility.checkContainsAbc(string2);
+            StringUtility.checkContainsAbc(string3);
+        } catch (DocumentNumberDoesNotContainSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+
         UtilityClass.printer(delimiter);
 
         StringUtility.checkStartWith(string);
