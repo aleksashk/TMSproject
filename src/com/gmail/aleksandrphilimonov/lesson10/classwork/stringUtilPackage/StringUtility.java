@@ -12,7 +12,7 @@ public class StringUtility {
     public static final String SPACE = " ";
     public static final String STRING_FOR_REPLACE = "***";
     public static final String CHECK_STRING = "abc";
-    public static final int NUMBER_FOR_CHECK = 555;
+    public static final String NUMBER_FOR_CHECK = "555";
     public static final String CHECK_STRING1 = "1a2b";
 
     public static void printFirstTwoNumericBlocks(String string) {
@@ -57,13 +57,12 @@ public class StringUtility {
         UtilityClass.printer(msg);
     }
 
-    public static void isStartWith(String string) {
+    public static void checkStartWith(String string) {
         String msg;
-        String checkString = String.valueOf(NUMBER_FOR_CHECK);
-        if (string.startsWith(checkString)) {
-            msg = "String " + string + " starts with " + checkString + "\n";
+        if (string.startsWith(NUMBER_FOR_CHECK)) {
+            msg = "String " + string + " starts with " + NUMBER_FOR_CHECK + "\n";
         } else {
-            msg = "String " + string + " doesn't start with " + checkString + "\n";
+            msg = "String " + string + " doesn't start with " + NUMBER_FOR_CHECK + "\n";
         }
         UtilityClass.printer(msg);
     }

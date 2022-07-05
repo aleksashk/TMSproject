@@ -25,9 +25,9 @@ public class MainApp {
         StringUtility.checkContainsAbc(string3);
         UtilityClass.printer(delimiter);
 
-        StringUtility.isStartWith(string);
-        StringUtility.isStartWith(string2);
-        StringUtility.isStartWith(string3);
+        StringUtility.checkStartWith(string);
+        StringUtility.checkStartWith(string2);
+        StringUtility.checkStartWith(string3);
         UtilityClass.printer(delimiter);
 
         StringUtility.isEndWith(string);
