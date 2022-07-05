@@ -2,9 +2,6 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.Scanner;
 
 public class StringUtility {
@@ -135,20 +132,12 @@ public class StringUtility {
         }
 
         String word = sArray[number];
+        String msg = "Word '" + word + "' isn't a palindrome.";
 
-        List<Character> list = new LinkedList<>();
-        for (char ch : word.toCharArray()) {
-            list.add(ch);
-        }
+        String rev = new StringBuilder(word).reverse().toString();
 
-        ListIterator<Character> listIterator = list.listIterator();
-        ListIterator<Character> listIteratorReverse = list.listIterator(list.size());
-        String msg = "Word '" + word + "' is palindrome";
-        while (listIterator.hasNext() & listIteratorReverse.hasPrevious()) {
-            if (Character.toLowerCase(listIterator.next()) != Character.toLowerCase(listIteratorReverse.previous())) {
-                msg = "Word '" + word + "' isn't a palindrome.";
-                break;
-            }
+        if (rev.equals(word)) {
+            msg = "Word '" + word + "' is palindrome";
         }
         System.out.println(msg);
     }
