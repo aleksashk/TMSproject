@@ -2,6 +2,7 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.mainTask;
 
 import com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage.StringUtility;
 import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotEndWithSequenceException;
 import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotStartWithSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
@@ -57,9 +58,21 @@ public class MainApp {
         }
         UtilityClass.printer(delimiter);
 
-        StringUtility.isEndWith(string);
-        StringUtility.isEndWith(string2);
-        StringUtility.isEndWith(string3);
+        try {
+            StringUtility.checkEndWith(string);
+        } catch (DocumentNumberDoesNotEndWithSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            StringUtility.checkEndWith(string2);
+        } catch (DocumentNumberDoesNotEndWithSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            StringUtility.checkEndWith(string3);
+        } catch (DocumentNumberDoesNotEndWithSequenceException e) {
+            System.out.println(e.getMessage());
+        }
         UtilityClass.printer(delimiter);
     }
 }

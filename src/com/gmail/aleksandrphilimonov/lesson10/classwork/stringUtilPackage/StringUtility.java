@@ -1,6 +1,7 @@
 package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
 import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotEndWithSequenceException;
 import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotStartWithSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
@@ -64,14 +65,15 @@ public class StringUtility {
         }
     }
 
-    public static void isEndWith(String string) {
+    public static void checkEndWith(String string) throws DocumentNumberDoesNotEndWithSequenceException {
         String msg;
-        if (string.endsWith(CHECK_STRING1)) {
-            msg = "String " + string + " ends with " + CHECK_STRING1 + "\n";
-        } else {
+        if (!string.endsWith(CHECK_STRING1)) {
             msg = "String " + string + " doesn't end with " + CHECK_STRING1 + "\n";
+            throw new DocumentNumberDoesNotEndWithSequenceException(msg);
+        } else {
+            msg = "String " + string + " ends with " + CHECK_STRING1 + "\n";
+            UtilityClass.printer(msg);
         }
-        UtilityClass.printer(msg);
     }
 
     public static void theShortestWord(String string) {
