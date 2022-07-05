@@ -1,6 +1,7 @@
 package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
 import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotStartWithSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 import java.util.Scanner;
@@ -46,20 +47,21 @@ public class StringUtility {
         if (!string.contains(CHECK_STRING)) {
             msg = "string " + string + " don't contains substring " + CHECK_STRING + "\n";
             throw new DocumentNumberDoesNotContainSequenceException(msg);
-        }else {
+        } else {
             msg = "string " + string + " contains substring " + CHECK_STRING + "\n";
             UtilityClass.printer(msg);
         }
     }
 
-    public static void checkStartWith(String string) {
+    public static void checkStartWith(String string) throws DocumentNumberDoesNotStartWithSequenceException {
         String msg;
-        if (string.startsWith(NUMBER_FOR_CHECK)) {
-            msg = "String " + string + " starts with " + NUMBER_FOR_CHECK + "\n";
-        } else {
+        if (!string.startsWith(NUMBER_FOR_CHECK)) {
             msg = "String " + string + " doesn't start with " + NUMBER_FOR_CHECK + "\n";
+            throw new DocumentNumberDoesNotStartWithSequenceException(msg);
+        } else {
+            msg = "String " + string + " starts with " + NUMBER_FOR_CHECK + "\n";
+            UtilityClass.printer(msg);
         }
-        UtilityClass.printer(msg);
     }
 
     public static void isEndWith(String string) {

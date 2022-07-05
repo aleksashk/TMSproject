@@ -2,6 +2,7 @@ package com.gmail.aleksandrphilimonov.lesson10.classwork.mainTask;
 
 import com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage.StringUtility;
 import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotStartWithSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 public class MainApp {
@@ -23,7 +24,15 @@ public class MainApp {
 
         try {
             StringUtility.checkContainsAbc(string);
+        } catch (DocumentNumberDoesNotContainSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
             StringUtility.checkContainsAbc(string2);
+        } catch (DocumentNumberDoesNotContainSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
             StringUtility.checkContainsAbc(string3);
         } catch (DocumentNumberDoesNotContainSequenceException e) {
             System.out.println(e.getMessage());
@@ -31,9 +40,21 @@ public class MainApp {
 
         UtilityClass.printer(delimiter);
 
-        StringUtility.checkStartWith(string);
-        StringUtility.checkStartWith(string2);
-        StringUtility.checkStartWith(string3);
+        try {
+            StringUtility.checkStartWith(string);
+        } catch (DocumentNumberDoesNotStartWithSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            StringUtility.checkStartWith(string2);
+        } catch (DocumentNumberDoesNotStartWithSequenceException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            StringUtility.checkStartWith(string3);
+        } catch (DocumentNumberDoesNotStartWithSequenceException e) {
+            System.out.println(e.getMessage());
+        }
         UtilityClass.printer(delimiter);
 
         StringUtility.isEndWith(string);
