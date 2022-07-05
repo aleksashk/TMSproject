@@ -30,13 +30,8 @@ public class StringUtility {
     }
 
     public static void renameAllLetter(String string) {
-        StringBuilder sb = new StringBuilder();
-        String[] array = splitStringByDash(string);
-        for (String s : array) {
-            isThreeLetters(sb, s);
-        }
-        sb.delete(sb.length() - 1, sb.length());
-        System.out.print(sb);
+        String resultString = string.replaceAll("[a-zA-Z]{3}", STRING_FOR_REPLACE);
+        System.out.print(resultString);
     }
 
     public static void showOnlyLetters(String string) {
@@ -170,28 +165,6 @@ public class StringUtility {
             }
         }
         System.out.println(msg);
-    }
-
-    private static void isThreeLetters(StringBuilder sb, String s) {
-        if (s.length() != 3) {
-            sb.append(s)
-                    .append(StringUtility.DASH);
-        } else {
-            boolean flag = true;
-            char[] chars = s.toCharArray();
-            for (char aChar : chars) {
-                if (!Character.isAlphabetic(aChar)) {
-                    flag = false;
-                    break;
-                }
-            }
-            if (!flag) {
-                sb.append(s);
-            } else {
-                sb.append(StringUtility.STRING_FOR_REPLACE)
-                        .append(StringUtility.DASH);
-            }
-        }
     }
 
     public static void doubleLetter(String string) {
