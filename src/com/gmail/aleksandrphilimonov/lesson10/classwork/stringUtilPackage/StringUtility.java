@@ -47,17 +47,12 @@ public class StringUtility {
         UtilityClass.printer(sb.toString());
     }
 
-    public static void isContainsAbc(String string) {
-        String msg = "";
-        String[] sArray = string.split(DASH);
-        for (String value : sArray) {
-            String s = value.toLowerCase();
-            if (s.contains(CHECK_STRING)) {
-                msg = "sequence " + s + " contains string " + CHECK_STRING + "\n";
-                break;
-            } else {
-                msg = "sequence " + s + " don't contains string " + CHECK_STRING + "\n";
-            }
+    public static void checkContainsAbc(String string) {
+        String msg;
+        if (string.contains(CHECK_STRING)) {
+            msg = "string " + string + " contains substring " + CHECK_STRING + "\n";
+        } else {
+            msg = "string " + string + " don't contains substring " + CHECK_STRING + "\n";
         }
         UtilityClass.printer(msg);
     }

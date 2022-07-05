@@ -20,9 +20,9 @@ public class MainApp {
         StringUtility.showOnlyLetters(string);
         UtilityClass.printer(delimiter);
 
-        StringUtility.isContainsAbc(string);
-        StringUtility.isContainsAbc(string2);
-        StringUtility.isContainsAbc(string3);
+        StringUtility.checkContainsAbc(string);
+        StringUtility.checkContainsAbc(string2);
+        StringUtility.checkContainsAbc(string3);
         UtilityClass.printer(delimiter);
 
         StringUtility.isStartWith(string);
