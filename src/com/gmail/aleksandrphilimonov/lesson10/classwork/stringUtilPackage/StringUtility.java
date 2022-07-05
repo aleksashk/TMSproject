@@ -147,10 +147,9 @@ public class StringUtility {
         for (int i = 0; i < chars.length; ) {
             System.out.print(chars[i]);
             if (Character.isAlphabetic(chars[i])) {
-                System.out.print(chars[i++]);
-            } else {
-                i++;
+                System.out.print(chars[i]);
             }
+            i++;
         }
     }
 }
