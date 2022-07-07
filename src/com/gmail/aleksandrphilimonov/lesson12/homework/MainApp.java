@@ -1,9 +1,12 @@
 package com.gmail.aleksandrphilimonov.lesson12.homework;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -18,14 +21,30 @@ public class MainApp {
         List<String> correctDocumentNumber = getCorrectDocumentNumber(fileName);
         List<String> wrongDocumentNumber = getWrongDocumentNumber(fileName);
 
-        showDocumentNumbers(correctDocumentNumber, wrongDocumentNumber);
+        try (BufferedWriter correctWriter = new BufferedWriter(new FileWriter("correctFileName.txt")); BufferedWriter wrongWriter = new BufferedWriter(new FileWriter("wrongFileName.txt"))) {
+            for (String str : correctDocumentNumber) {
+                correctWriter.write(str);
+                correctWriter.newLine();
+            }
+            for (String str : wrongDocumentNumber) {
+                StringBuilder sb = new StringBuilder(str);
+                sb.append(getCause(str));
+                wrongWriter.write(sb.toString());
+                wrongWriter.newLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    private static void showDocumentNumbers(List<String> correctDocumentNumber, List<String> wrongDocumentNumber) {
-        System.out.println("Correct numbers of documents: ");
-        System.out.println(correctDocumentNumber);
-        System.out.println("Wrong numbers of documents: ");
-        System.out.println(wrongDocumentNumber);
+    private static String getCause(String str) {
+        StringBuilder sb = new StringBuilder();
+        if ((str.startsWith("docnum") || str.startsWith("contract")) && str.length() != 15) {
+            sb.append(" -> wrong length of the document number. It should be equals 15");
+        } else if (!str.startsWith("docnum") || !str.startsWith("contract")) {
+            sb.append(" -> wrong name of document. It should be starts with docnum or contract");
+        }
+        return sb.toString();
     }
 
     private static List<String> getWrongDocumentNumber(List<String> fileName) {
