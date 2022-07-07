@@ -7,6 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -19,14 +22,14 @@ public class MainApp {
         List<String> fileName = reader.lines().collect(Collectors.toList());
 
         List<String> correctDocumentNumber = getCorrectDocumentNumber(fileName);
-        List<String> wrongDocumentNumber = getWrongDocumentNumber(fileName);
+        fileName.removeAll(correctDocumentNumber);
 
         try (BufferedWriter correctWriter = new BufferedWriter(new FileWriter("correctFileName.txt")); BufferedWriter wrongWriter = new BufferedWriter(new FileWriter("wrongFileName.txt"))) {
             for (String str : correctDocumentNumber) {
                 correctWriter.write(str);
                 correctWriter.newLine();
             }
-            for (String str : wrongDocumentNumber) {
+            for (String str : fileName) {
                 StringBuilder sb = new StringBuilder(str);
                 sb.append(getCause(str));
                 wrongWriter.write(sb.toString());
