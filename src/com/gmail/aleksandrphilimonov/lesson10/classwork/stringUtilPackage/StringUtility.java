@@ -1,5 +1,8 @@
 package com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage;
 
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotEndWithSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotStartWithSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 import java.util.Scanner;
@@ -40,34 +43,37 @@ public class StringUtility {
         UtilityClass.printer(sb.toString());
     }
 
-    public static void checkContainsAbc(String string) {
+    public static void checkContainsAbc(String string) throws DocumentNumberDoesNotContainSequenceException {
         String msg;
-        if (string.contains(CHECK_STRING)) {
-            msg = "string " + string + " contains substring " + CHECK_STRING + "\n";
-        } else {
+        if (!string.contains(CHECK_STRING)) {
             msg = "string " + string + " don't contains substring " + CHECK_STRING + "\n";
+            throw new DocumentNumberDoesNotContainSequenceException(msg);
+        } else {
+            msg = "string " + string + " contains substring " + CHECK_STRING + "\n";
+            UtilityClass.printer(msg);
         }
-        UtilityClass.printer(msg);
     }
 
-    public static void checkStartWith(String string) {
+    public static void checkStartWith(String string) throws DocumentNumberDoesNotStartWithSequenceException {
         String msg;
-        if (string.startsWith(NUMBER_FOR_CHECK)) {
-            msg = "String " + string + " starts with " + NUMBER_FOR_CHECK + "\n";
-        } else {
+        if (!string.startsWith(NUMBER_FOR_CHECK)) {
             msg = "String " + string + " doesn't start with " + NUMBER_FOR_CHECK + "\n";
+            throw new DocumentNumberDoesNotStartWithSequenceException(msg);
+        } else {
+            msg = "String " + string + " starts with " + NUMBER_FOR_CHECK + "\n";
+            UtilityClass.printer(msg);
         }
-        UtilityClass.printer(msg);
     }
 
-    public static void isEndWith(String string) {
+    public static void checkEndWith(String string) throws DocumentNumberDoesNotEndWithSequenceException {
         String msg;
-        if (string.endsWith(CHECK_STRING1)) {
-            msg = "String " + string + " ends with " + CHECK_STRING1 + "\n";
-        } else {
+        if (!string.endsWith(CHECK_STRING1)) {
             msg = "String " + string + " doesn't end with " + CHECK_STRING1 + "\n";
+            throw new DocumentNumberDoesNotEndWithSequenceException(msg);
+        } else {
+            msg = "String " + string + " ends with " + CHECK_STRING1 + "\n";
+            UtilityClass.printer(msg);
         }
-        UtilityClass.printer(msg);
     }
 
     public static void theShortestWord(String string) {
