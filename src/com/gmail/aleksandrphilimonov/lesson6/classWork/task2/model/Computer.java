@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.lesson6.classWork.task2;
+package com.gmail.aleksandrphilimonov.lesson6.classWork.task2.model;
 
 public class Computer {
     private double cost;
@@ -54,11 +54,11 @@ public class Computer {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " {" +
-                "cost=" + cost +
-                ", model='" + model + '\'' +
-                ", ram=" + ram +
-                ", hdd=" + hdd +
-                '}';
+        return getClass().getSimpleName() + "\t[" +
+                "model='" + model + '\'' +
+                "; ram" + ram +
+                "; hdd" + hdd +
+                "; cost=" + cost +
+                ']';
     }
 }

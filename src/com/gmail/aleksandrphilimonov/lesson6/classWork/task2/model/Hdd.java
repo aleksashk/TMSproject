@@ -1,17 +1,20 @@
-package com.gmail.aleksandrphilimonov.lesson6.classWork.task2;
+package com.gmail.aleksandrphilimonov.lesson6.classWork.task2.model;
 
-public class Ram {
+public class Hdd {
     private String name;
     private String value;
+    private String type;
 
-    public Ram() {
+    public Hdd() {
         this.name = "noname";
         this.value = "1GB";
+        this.type = "inner";
     }
 
-    public Ram(String name, String value) {
+    public Hdd(String name, String value, String type) {
         this.name = name;
         this.value = value;
+        this.type = type;
     }
 
     public String getName() {
@@ -30,11 +33,20 @@ public class Ram {
         this.value = value;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " {" +
+        return ":[" +
                 "name='" + name + '\'' +
                 ", value='" + value + '\'' +
-                '}';
+                ", type='" + type + '\'' +
+                ']';
     }
 }

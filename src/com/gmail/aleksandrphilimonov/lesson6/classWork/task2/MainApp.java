@@ -1,5 +1,9 @@
 package com.gmail.aleksandrphilimonov.lesson6.classWork.task2;
 
+import com.gmail.aleksandrphilimonov.lesson6.classWork.task2.model.Computer;
+import com.gmail.aleksandrphilimonov.lesson6.classWork.task2.model.Hdd;
+import com.gmail.aleksandrphilimonov.lesson6.classWork.task2.model.Ram;
+
 import java.util.stream.Stream;
 
 public class MainApp {
