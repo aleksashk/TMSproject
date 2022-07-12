@@ -1,9 +1,9 @@
 package com.gmail.aleksandrphilimonov.lesson7.classwork.task3;
 
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.entity.ContractForSupplyGoods;
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.entity.ContractWithEmployee;
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.entity.FinancialInvoice;
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.entity.Register;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.entity.ContractForSupplyGoods;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.entity.ContractWithEmployee;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.entity.FinancialInvoice;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.entity.Register;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

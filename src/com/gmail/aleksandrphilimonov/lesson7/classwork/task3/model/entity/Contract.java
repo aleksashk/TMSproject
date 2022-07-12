@@ -1,4 +1,6 @@
-package com.gmail.aleksandrphilimonov.lesson7.classwork.task3.entity;
+package com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.entity;
+
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.interfaces.Showable;
 
 import java.util.Date;
 

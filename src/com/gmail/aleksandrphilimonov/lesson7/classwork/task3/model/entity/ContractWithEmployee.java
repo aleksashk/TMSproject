@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.lesson7.classwork.task3.entity;
+package com.gmail.aleksandrphilimonov.lesson7.classwork.task3.model.entity;
 
 import java.util.Date;
 
@@ -44,21 +44,19 @@ public class ContractWithEmployee extends Contract {
 
     @Override
     public String getInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("---------------------------------------------------\n")
-                .append(getClass().getSimpleName())
-                .append(":\n")
-                .append("numberOfDoc = ")
-                .append(super.getNumberOfDoc())
-                .append("\n")
-                .append("dateOfDoc = ")
-                .append(super.getDateOfDoc())
-                .append("\n")
-                .append("contractStartDate = ")
-                .append(contractStartDate)
-                .append('\n')
-                .append("contractEndDate = ")
-                .append(contractEndDate);
-        return sb.toString();
+        return "---------------------------------------------------\n" +
+                getClass().getSimpleName() +
+                ":\n" +
+                "numberOfDoc = " +
+                super.getNumberOfDoc() +
+                "\n" +
+                "dateOfDoc = " +
+                super.getDateOfDoc() +
+                "\n" +
+                "contractStartDate = " +
+                contractStartDate +
+                '\n' +
+                "contractEndDate = " +
+                contractEndDate;
     }
 }
