@@ -1,9 +1,9 @@
 package com.gmail.aleksandrphilimonov.lesson7.classwork.task1;
 
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.shape.Circle;
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.shape.Rectangle;
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.shape.Shape;
-import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.shape.Triangle;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.model.figure.Circle;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.model.figure.Rectangle;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.model.interfaces.Shape;
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.model.figure.Triangle;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 public class MainApp {
@@ -16,6 +16,7 @@ public class MainApp {
                 new Triangle(2.01,1.25,3.05)
         };
         double totalShapesPerimeter = 0;
+
         for (Shape shape : shapes) {
             totalShapesPerimeter += shape.getPerimeter();
         }

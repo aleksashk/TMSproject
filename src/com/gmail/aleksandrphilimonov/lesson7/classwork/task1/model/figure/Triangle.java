@@ -1,6 +1,8 @@
-package com.gmail.aleksandrphilimonov.lesson7.classwork.task1.shape;
+package com.gmail.aleksandrphilimonov.lesson7.classwork.task1.model.figure;
 
-public class Triangle implements Shape{
+import com.gmail.aleksandrphilimonov.lesson7.classwork.task1.model.interfaces.Shape;
+
+public class Triangle implements Shape {
     private double sideA;
     private double sideB;
     private double sideC;
