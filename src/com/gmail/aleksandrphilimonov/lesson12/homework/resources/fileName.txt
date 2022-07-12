@@ -1,9 +1,12 @@
 docnum124559832.txt
-docnum12455983298.txt
+docnum~~~123.txt
+docnum-()[]<.txt
 docnu124559832.txt
 docnum12.txt
 docnum000200031.txt
 contract4578632.txt
 contract457863287d.txt
 contract25as21d.txt
-contract9.txt
+contract7.txt
+contract123.txt
+contract345645645wer.txt
