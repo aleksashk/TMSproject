@@ -1,4 +1,6 @@
-package com.gmail.aleksandrphilimonov.lesson9.classwork.task2;
+package com.gmail.aleksandrphilimonov.lesson9.classwork.task2.model.entity;
+
+import com.gmail.aleksandrphilimonov.lesson9.classwork.task2.model.interfaces.Calculatable;
 
 import java.util.Arrays;
 

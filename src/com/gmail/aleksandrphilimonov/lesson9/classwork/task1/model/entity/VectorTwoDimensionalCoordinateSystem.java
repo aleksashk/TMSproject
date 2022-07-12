@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.lesson9.classwork.task1;
+package com.gmail.aleksandrphilimonov.lesson9.classwork.task1.model.entity;
 
 import java.util.Random;
 

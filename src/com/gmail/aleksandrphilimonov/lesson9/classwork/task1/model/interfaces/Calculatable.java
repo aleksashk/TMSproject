@@ -1,4 +1,6 @@
-package com.gmail.aleksandrphilimonov.lesson9.classwork.task2;
+package com.gmail.aleksandrphilimonov.lesson9.classwork.task1.model.interfaces;
+
+import com.gmail.aleksandrphilimonov.lesson9.classwork.task1.model.entity.Vector;
 
 public interface Calculatable {
 

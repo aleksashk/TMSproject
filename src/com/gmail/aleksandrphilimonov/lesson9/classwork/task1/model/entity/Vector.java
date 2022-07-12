@@ -1,4 +1,6 @@
-package com.gmail.aleksandrphilimonov.lesson9.classwork.task1;
+package com.gmail.aleksandrphilimonov.lesson9.classwork.task1.model.entity;
+
+import com.gmail.aleksandrphilimonov.lesson9.classwork.task1.model.interfaces.Calculatable;
 
 public abstract class Vector implements Calculatable, Comparable<Vector> {
     private int xCoordinate;
