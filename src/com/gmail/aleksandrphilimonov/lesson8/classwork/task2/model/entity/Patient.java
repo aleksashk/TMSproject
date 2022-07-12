@@ -1,4 +1,6 @@
-package com.gmail.aleksandrphilimonov.lesson8.classwork.task2.model;
+package com.gmail.aleksandrphilimonov.lesson8.classwork.task2.model.entity;
+
+import com.gmail.aleksandrphilimonov.lesson8.classwork.task2.model.enumeration.TreatmentPlan;
 
 public class Patient {
     private String name;
@@ -33,6 +35,14 @@ public class Patient {
 
     public void setTreatmentPlan(TreatmentPlan treatmentPlan) {
         this.treatmentPlan = treatmentPlan;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
     public void treatPatient() {

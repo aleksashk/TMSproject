@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.lesson8.classwork.task2.model;
+package com.gmail.aleksandrphilimonov.lesson8.classwork.task2.model.entity;
 
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
