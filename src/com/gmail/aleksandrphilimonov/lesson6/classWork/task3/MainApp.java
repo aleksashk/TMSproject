@@ -1,12 +1,14 @@
 package com.gmail.aleksandrphilimonov.lesson6.classWork.task3;
 
+import com.gmail.aleksandrphilimonov.lesson6.classWork.task3.model.Atm;
+
 public class MainApp {
     public static void main(String[] args) {
         Atm atm = new Atm(100,100,100);
-        System.out.println(atm);
+        atm.showTheNumberOfBills();
         atm.addMoney(2550);
-        System.out.println(atm);
-        atm.withdrawMoney(1220);
-        System.out.println(atm);
+        atm.showTheNumberOfBills();
+        atm.withdrawSomeMoney(1220);
+        atm.showTheNumberOfBills();
     }
 }

@@ -1,4 +1,4 @@
-package com.gmail.aleksandrphilimonov.lesson6.classWork.task3;
+package com.gmail.aleksandrphilimonov.lesson6.classWork.task3.model;
 
 public class Atm {
     private int countOfMoney20;
@@ -59,29 +59,36 @@ public class Atm {
         if (countOfMoney20 * 20 + countOfMoney50 * 50 + countOfMoney100 * 100 >= amount) {
             if (amount >= 100) {
                 countOfMoney100 -= (amount - amount % 100) / 100;
-                System.out.println("count of 100 = " + (amount - amount % 100) / 100);
+                System.out.println("\tcount of 100$ = " + (amount - amount % 100) / 100);
             }
             amount = amount % 100;
             if (amount >= 50) {
                 countOfMoney50 -= (amount - amount % 50) / 50;
-                System.out.println("count of 50 = " + (amount - amount % 50) / 50);
+                System.out.println("\tcount of 50$ = " + (amount - amount % 50) / 50);
             }
             amount = amount % 50;
             if (amount >= 20) {
                 countOfMoney20 -= (amount - amount % 20) / 20;
-                System.out.println("count of 20 = " + (amount - amount % 20) / 20);
+                System.out.println("\tcount of 20$ = " + (amount - amount % 20) / 20);
             }
             return true;
         }
         return false;
     }
 
-    @Override
-    public String toString() {
-        return getClass().getSimpleName() + " {" +
-                "countOfMoney20=" + countOfMoney20 +
-                ", countOfMoney50=" + countOfMoney50 +
-                ", countOfMoney100=" + countOfMoney100 +
-                " total: " + (countOfMoney20 * 20 + countOfMoney50 * 50 + countOfMoney100 * 100);
+    public void withdrawSomeMoney(int amount) {
+        System.out.println("--------------------------------------------------");
+        System.out.println("attempt to withdraw the amount: " + amount + " from the account");
+        System.out.println("transaction status: " + withdrawMoney(amount));
+        System.out.println("--------------------------------------------------");
+    }
+
+    public void showTheNumberOfBills() {
+        System.out.println(getClass().getSimpleName() + '[' +
+                "countOfMoney20$=" + countOfMoney20 +
+                ", countOfMoney50$=" + countOfMoney50 +
+                ", countOfMoney100$=" + countOfMoney100 +
+                "; total: " + (countOfMoney20 * 20 + countOfMoney50 * 50 + countOfMoney100 * 100)
+                + "$ ]");
     }
 }
