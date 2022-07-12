@@ -159,6 +159,10 @@ public class UtilityClass {
         System.out.print(msg);
     }
 
+    public static void print(String msg) {
+        System.out.println(msg);
+    }
+
     public static void printer(int[] array) {
         System.out.print(Arrays.toString(array));
         System.out.println();

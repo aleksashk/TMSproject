@@ -1,9 +1,9 @@
 package com.gmail.aleksandrphilimonov.lesson10.classwork.mainTask;
 
 import com.gmail.aleksandrphilimonov.lesson10.classwork.stringUtilPackage.StringUtility;
-import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotContainSequenceException;
-import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotEndWithSequenceException;
-import com.gmail.aleksandrphilimonov.lesson11.classwork.DocumentNumberDoesNotStartWithSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.main_task.DocumentNumberDoesNotContainSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.main_task.DocumentNumberDoesNotEndWithSequenceException;
+import com.gmail.aleksandrphilimonov.lesson11.classwork.main_task.DocumentNumberDoesNotStartWithSequenceException;
 import com.gmail.aleksandrphilimonov.util.UtilityClass;
 
 public class MainApp {
