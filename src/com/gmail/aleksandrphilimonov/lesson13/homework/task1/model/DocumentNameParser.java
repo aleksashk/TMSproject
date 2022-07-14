@@ -24,7 +24,6 @@ public class DocumentNameParser {
         String string = scanner.nextLine();
         while (!exit.equals(string)) {
             filePaths.add(string);
-            msg = "input a path and name of file or input 0 for EXIT: ";
             UtilityClass.print(msg);
             string = scanner.nextLine();
         }

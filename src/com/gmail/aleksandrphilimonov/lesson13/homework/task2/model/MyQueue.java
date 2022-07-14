@@ -15,15 +15,13 @@ public class MyQueue<T> {
         storage.push(t);
     }
 
-    public void dequeue() {
-        if (!tmpStorage.isEmpty()) {
-            tmpStorage.pop();
-        } else {
+    public T dequeue() {
+        if (tmpStorage.isEmpty()) {
             while (!storage.isEmpty()) {
                 tmpStorage.push(storage.pop());
             }
-            tmpStorage.pop();
         }
+        return tmpStorage.pop();
     }
 
     public void printDeQueue() {
